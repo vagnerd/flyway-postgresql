@@ -5,7 +5,7 @@ Run suite-test:
 ```
 git clone https://github.com/vagnerd/flyway-postgresql.git
 sudo chown -R 101 sql_versions
-docker-compose up
+docker-compose up -d
 ```
 
 Access flyway container:
