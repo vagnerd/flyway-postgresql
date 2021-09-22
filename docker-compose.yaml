@@ -1,0 +1,21 @@
+version: '3'
+services:
+  flyway:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: sleep 1d 
+    volumes:
+      - ${PWD}/sql_versions:/flyway/sql
+      - ${PWD}/flyway.config:/flyway/conf/flyway.config
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:12
+    restart: always
+    ports:
+    - "5432:5432"
+    env_file:
+      - .env
