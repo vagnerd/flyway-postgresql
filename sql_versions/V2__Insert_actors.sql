@@ -1,0 +1,10 @@
+INSERT INTO actor (first_name, last_name) VALUES ('0Davolio', 'Nancy');
+INSERT INTO actor (first_name, last_name) VALUES ('1Davolio', 'Nancy');
+INSERT INTO actor (first_name, last_name) VALUES ('2Davolio', 'Nancy');
+INSERT INTO actor (first_name, last_name) VALUES ('3Davolio', 'Nancy');
+INSERT INTO actor (first_name, last_name) VALUES ('4Davolio', 'Nancy');
+INSERT INTO actor (first_name, last_name) VALUES ('5Davolio', 'Nancy');
+INSERT INTO actor (first_name, last_name) VALUES ('6Davolio', 'Nancy');
+INSERT INTO actor (first_name, last_name) VALUES ('7Davolio', 'Nancy');
+INSERT INTO actor (first_name, last_name) VALUES ('8Davolio', 'Nancy');
+INSERT INTO actor (first_name, last_name) VALUES ('9Davolio', 'Nancy');

@@ -1,1 +1,0 @@
-ALTER TABLE region ADD COLUMN region_name VARCHAR(100);
