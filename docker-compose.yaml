@@ -1,4 +1,4 @@
-version: '3'
+version: '3.1'
 services:
   flyway:
     build:
@@ -7,15 +7,17 @@ services:
     command: sleep 1d 
     volumes:
       - ${PWD}/sql_versions:/flyway/sql
-      - ${PWD}/flyway.config:/flyway/conf/flyway.config
-    env_file:
-      - .env
+      - ${PWD}/flyway.conf:/flyway/conf/flyway.conf
     depends_on:
-      - postgres
-  postgres:
-    image: postgres:12
+      - mysql 
+    links:
+      - mysql
+  mysql:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
     restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: test-pass
+      MYSQL_DATABASE: 'test-db'
     ports:
-    - "5432:5432"
-    env_file:
-      - .env
+    - "3306:3306"
